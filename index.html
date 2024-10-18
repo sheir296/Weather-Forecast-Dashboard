@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar">
+        <img src="download.jpeg" alt="Weather App Logo" id="weather-logo">
+        <div class="logo">WeatherApp</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tables.html">Tables</a></li>
+        </ul>
+    </div>
+
+</div>
+    <!-- Main Dashboard Section -->
+    <main>
+        <section id="weather-widget">
+            <h2>Weather Details</h2>
+            <div id="weather-display" class="weather-card">
+                <!-- Weather info will be populated here -->
+                <p>City: <span id="city-name"></span></p>
+                <p>Temperature: <span id="temperature"></span></p>
+                <p>Weather: <span id="weather-condition"></span></p>
+                <p>Humidity: <span id="humidity"></span></p>
+                <p>Wind Speed: <span id="wind-speed"></span></p>
+            </div>
+            <button id="toggle-unit">Toggle Temperature Unit</button>
+
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Enter city">
+                <button id="get-weather-btn" type="submit">Get Weather</button>
+            </form>
+        
+        </section>
+        
+
+        <!-- Charts Section -->
+        <section id="charts">
+            <h2>Weather Forecast Charts</h2>
+            <canvas id="tempBarChart"></canvas>
+            <canvas id="weatherDoughnutChart"></canvas>
+            <canvas id="tempLineChart"></canvas>
+        </section>
+
+        <!-- Table Section -->
+        <section id="forecast-table">
+            <h2>5-Day Temperature Forecast</h2>
+            <div>
+                <button id="ascending-temp-btn">Sort Temperature Ascending</button>
+                <button id="descending-temp-btn">Sort Temperature Descending</button>
+                <button id="filter-rain-btn">Show Rainy Days</button>
+                <button id="highest-temp-btn">Show Highest Temperature</button>
+            </div>
+            <table id="weather-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temperature</th>
+                        <th>Weather</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Weather table entries will populate here -->
+                </tbody>
+            </table>
+            <div id="pagination">
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <div id="chatbot-section">
+            <h2 id="chatbot-heading"><b>Weather ChatBot</b></h2>
+            <form id="question-form">
+                <input type="text" id="user-question" placeholder="Ask a weather-related question" required>
+                <button type="submit">Ask</button>
+            </form>
+            <p id="chatbot-response"></p>
+        </div>
+        
+        <div id="response-container"></div>
+    </main>
+
+       <!-- Section for displaying the filtered data -->
+       <div class="filtered-results">
+        <h3>Filtered Data</h3>
+        <div id="filtered-results-table"></div>
+    </div>
+</div>
+    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+
+</body>
+</html>

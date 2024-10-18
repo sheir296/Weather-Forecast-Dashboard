@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="logo">WeatherApp</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tables.html">Tables</a></li>
+           
+        </ul>
+    </div>
+    <main>
+        <section id="weather-display">
+            <h2 id="city-name">City Name</h2>
+            <p id="temperature">Temperature: -- °C</p>
+            <p id="weather-condition">Condition: --</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind-speed">Wind Speed: -- m/s</p>
+        </section>
+        <button id="toggle-unit">Toggle Temperature Unit</button>
+
+
+        <section id="charts">
+            <h2>Temperature and Weather Charts</h2>
+            <div class="chart-container">
+                <canvas id="tempBarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="weatherDoughnutChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="tempLineChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+
+</body>
+</html>

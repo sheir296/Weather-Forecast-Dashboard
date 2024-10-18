@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Tables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="logo">WeatherApp</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tables.html">Tables</a></li>
+           
+        </ul>
+    </div>
+    
+    <main>
+        <section id="weather-display">
+            <h2 id="city-name">City Name</h2>
+            <p id="temperature">Temperature: -- °C</p>
+            <p id="weather-condition">Condition: --</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind-speed">Wind Speed: -- m/s</p>
+        </section>
+        <button id="toggle-unit">Toggle Temperature Unit</button>
+
+
+        <section>
+            <h2>5-Day Weather Forecast</h2>
+            <table id="forecast-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temperature (°C)</th>
+                        <th>Weather Condition</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows populated dynamically by JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+
+</body>
+</html>
